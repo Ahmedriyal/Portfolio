@@ -1,0 +1,15 @@
+<div class="content">
+                    <div class="serviceBox">
+                        <img src="../Img/frontEnd.png" alt="">
+                        <h2>Front End Developer</h2>
+                        <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+                        <p class="list-title">Languages/Tools I use</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                            <li>VS Code</li>
+                            <li>Github</li>
+                        </ul>
+                    </div>
