@@ -15,12 +15,12 @@
     <div class="container">
         <div class="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Skill</a></li>
-                <li><a href="#project">Project</a></li>
+                <li><a href="#" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Skill</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
                 <!-- <li><a href="#">Testimonials</a></li> -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
 
@@ -79,8 +79,7 @@
             <section class="services adjust" id="services">
                 <div class="title">
                     <h2>Skills</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur cumque saepe consectetur
-                        voluptates id quisquam.</p>
+                    <p></p>
                 </div>
                 <div class="content">
                     <div class="serviceBox">
@@ -145,13 +144,12 @@
             <section class="project adjust" id="project">
                 <div class="title">
                     <h2>Project</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur cumque saepe consectetur
-                        voluptates id quisquam.</p>
+                    <p></p>
                 </div>
                 <div class="content">
                     <div class="workBx">
                         <!-- <div class="imgBx">
-                            <img src="../Img/img1.jpg" alt="">
+                            <img src="../Capture.PNG" alt="">
                         </div> -->
                         <div class="textBx">
                             <div class="info">
@@ -161,7 +159,7 @@
                             </div>
                             <span class="icon">
                                 <a href="https://github.com/Ahmedriyal/eCommerce" title="Github/JerseyShop"><i class="fab fa-github"></i></a>
-                                <a href="https://github.com/Ahmedriyal/eCommerce" title="Github/JerseyShop"><i class="fab fa-youtube"></i></a>
+                                <a href="" title="Youtube/JerseyShop"><i class="fab fa-youtube"></i></a>
                             </span>
                         </div>
                     </div>
@@ -189,7 +187,7 @@
                                 <p><strong>Python • Django • Postgres</strong></p>
                             </div>
                             <span class="icon">
-                                <a href="https://github.com/Ahmedriyal/JobFinder" title="Github/JobFinder"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Ahmedriyal/JobFinder" title="Github/TantabaT"><i class="fab fa-github"></i></a>
                             </span>
                         </div>
                     </div>
@@ -199,8 +197,12 @@
                         </div> -->
                         <div class="textBx">
                             <div class="info">
-                                <h3>Project 02</h3>
+                                <h3>Portfolio</h3>
+                                <p><strong>HTML • CSS • JavaScript</strong></p>
                             </div>
+                            <span class="icon">
+                                <a href="https://github.com/Ahmedriyal/Portfolio" title="Github/Portfolio"><i class="fab fa-github"></i></a>
+                            </span>
                         </div>
                     </div>
                     <div class="workBx">
@@ -221,27 +223,28 @@
                 <div class="title">
                     <h2>Contact Me</h2>
                 </div>
-                <div class="contactForm">
+                <form class="contactForm" action="https://formspree.io/f/mayadyyp" method="POST">
                     <div class="row">
-                        <input type="text" name="" placeholder="First Name">
-                        <input type="text" name="" placeholder="Last Name">
+                        <input type="text" name="firstname" placeholder="First Name">
+                        <input type="text" name="lastname" placeholder="Last Name">
                     </div>
                     <div class="row">
-                        <input type="text" name="" placeholder="Email Address">
-                        <input type="text" name="" placeholder="Mobile No.">
+                        <input type="text" name="_replyto" placeholder="Email Address">
+                        <input type="text" name="mobile" placeholder="Mobile No.">
                     </div>
                     <div class="row2">
-                        <textarea name="" placeholder="Message"></textarea>
+                        <textarea name="message" placeholder="Message"></textarea>
                     </div>
                     <div class="row2">
                         <input type="submit" value="Send">
                     </div>
-                </div>
+                </form>
             </section>
 
             <!-- Footer -->
             <div class="footer">
-                <p>Design & buily by Sheikh Ahad Ahmed</p>
+                <p>Design & buily by 
+                    <a href="https://github.com/Ahmedriyal">Sheikh Ahad Ahmed</a></p>
                 <!-- <div class="title">
                     <h2>Get In Touch</h2>
                     <p>Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
@@ -268,6 +271,13 @@
             topbar.classList.toggle('active');
             navigation.classList.toggle('active');
             main.classList.toggle('active');
+        }
+
+        function toggleMenu(){
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            navigation.classList.remove('active')
+            main.classList.remove('active')
         }
     </script>
 </body>
